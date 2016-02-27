@@ -12,19 +12,24 @@
             <div id="board"></div>
         </div>
 
-
-
-        <button id="display">GET REKT</button>
+        <input id="name">
+        <button id="getName">GET REKT</button>
 
         <script>
-            var button = document.getElementById('display');
-            button.onclick = function() {
-                alert('test');
+
+            var button = document.getElementById('getName');
+            button.onclick = isName;
+
+            function isName() {
+                var input = document.getElementById('name');
+                var name = input.value;
+                if (name == 'brendan') {
+                    alert('is brendan');
+                } else {
+                    alert('not brendan. It is ' + name);
+                }
             }
-            function add(num1, num2) {
-                var num3 = num1+num2;
-                alert(num3);
-            }
+
         </script>
     </body>
 </html>
